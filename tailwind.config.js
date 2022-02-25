@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'light': '#060b31',
-        'medium': '#030724'
+        'light': '#242426',
+        'medium': '#151515'
       },
       fontFamily: {
         'ubuntu': 'Ubuntu',
