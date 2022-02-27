@@ -61,14 +61,110 @@
                         developer.
                     </p>
                     <span class="w-full flex flex-row justify-evenly md:justify-start md:gap-5 mt-8">
-                        <button id="open" class="bg-red-600 shadow-light shadow py-2 px-4 rounded font-bold h-fit">Resume</button>
-                        <a href="https://github.com/osmanmaltiti?tab=repositories" id="button" class="font-bold bg-black h-fit py-2 px-8 rounded border-white shadow-light shadow">Repository</a>
+                        <button id="open" class="bg-red-600 shadow-light shadow py-2 px-4 rounded ">Resume</button>
+                        <a href="https://github.com/osmanmaltiti?tab=repositories" id="button" class=" bg-black h-fit py-2 px-8 rounded border-white shadow-light shadow">Repository</a>
                     </span>
                 </div>
             </span>
             <div id="projects" class="lg:rounded-md lg:w-[85%] w-screen bg-light gap-4 flex px-[2%] flex-col items-center py-8">
                 <h1 class="text-2xl lg:text-3xl font-bold self-start">Projects</h1>
-                <div id="project-map" class="flex flex-col w-full gap-4"></div>
+                <div id="project-map" class="flex flex-col w-full gap-4">
+                    
+                    <div id='Zozys' class=" bg-medium p-4 flex flex-col md:grid md:grid-cols-2 w-full md:justify-self-center md:place-self-center md:rounded-md">
+                        <span class="w-full">
+                            <h2 class="text-xl font-semibold text-red-500">Zozys</h2>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-200 font-bold">Description</h3>
+                            <p>Zozys is a web app i built for my Father's sawmill company. 
+                                It's basically and e-commerce app where clients can buy raw and processed wood, doors, bed frames among others and also place custom orders. 
+                                It's soon go into production. Its is responsive and renders good on all devices. 
+                                The frontend was built with React, Tailwind and Redux, Node/ExpressJS and JWT for the backend and MongoDB for the database.</p>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-300 font-bold">Stack used</h3>
+                            <ul class="grid grid-cols-4 md:flex w-full md:flex-row  gap-2">
+                                ReactJS, Redux, Tailwind, ExpressJS, MongoDB, JWT
+                            </ul>
+                            <span class="flex flex-row w-full justify-evenly md:justify-start md:gap-4 my-4">
+                                <a href='#' id='button' class="bg-red-600 shadow-light shadow py-2 px-4 rounded">Live Demo</a>
+                                <a href='https://github.com/osmanmaltiti/project-zero.git' id='button' class="bg-black py-2 px-4 shadow-light shadow rounded">Go To Repo</a>
+                            </span>
+                        </span>
+                        <img class='md:w-1/2 rounded-lg md:justify-self-end md:place-self-center shadow' src="./assets/images/zozys.png"/>
+                    </div>
+                    <div id='Quil' class=" bg-medium p-4 flex flex-col md:grid md:grid-cols-2 w-full md:justify-self-center md:place-self-center md:rounded-md">
+                        <span class="w-full">
+                            <h2 class="text-xl font-semibold text-red-500">Quil</h2>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-200 font-bold">Description</h3>
+                            <p>Quil is a twitter inspired web app. 
+                                It is the first major app i built with React.
+                                I didn't know much about media queries.
+                                As a result it does render well on small screens.
+                                But fixing that won't be an issue and I intend to make time for that. 
+                                The frontend was built with React, Redux and SASS,
+                                The backend was built mainly with Express and MongoDB and Firebase for Cloud Storage and Authentication.</p>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-300 font-bold">Stack used</h3>
+                            <ul class="grid grid-cols-4 md:flex w-full md:flex-row  gap-2">
+                                React, Redux, SASS, ExpressJS, MongoDB, Firebase
+                            </ul>
+                            <span class="flex flex-row w-full justify-evenly md:justify-start md:gap-4 my-4">
+                                <a href='https://quil-overhaul.netlify.app' id='button' class="bg-red-600 shadow-light shadow py-2 px-4 rounded">Live Demo</a>
+                                <a href='https://github.com/osmanmaltiti/project-one.git' id='button' class="bg-black py-2 px-4 shadow-light shadow rounded">Go To Repo</a>
+                            </span>
+                        </span>
+                        <img class='md:w-1/2 rounded-lg md:justify-self-end md:place-self-center shadow' src="./assets/images/quil.png"/>
+                    </div>
+                    <div id='ImageSlider' class=" bg-medium p-4 flex flex-col md:grid md:grid-cols-2 w-full md:justify-self-center md:place-self-center md:rounded-md">
+                        <span class="w-full">
+                            <h2 class="text-xl font-semibold text-red-500">ImageSlider</h2>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-200 font-bold">Description</h3>
+                            <p>This is a mini image carousel I built with React and Tailwind. It is a responsive component that can be used in any project. HTML version of this Component is also available in my repos.</p>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-300 font">Stack used</h3>
+                            <ul class="grid grid-cols-4 md:flex w-full md:flex-row  gap-2">
+                                ReactJS, Tailwind
+                            </ul>
+                            <span class="flex flex-row w-full justify-evenly md:justify-start md:gap-4 my-4">
+                                <a href='#' id='button' class="bg-red-600 shadow-light shadow py-2 px-4 rounded">Live Demo</a>
+                                <a href='https://github.com/osmanmaltiti/react-image-slider.git' id='button' class="bg-black py-2 px-4 shadow-light shadow rounded">Go To Repo</a>
+                            </span>
+                        </span>
+                        <img class='md:w-1/2 rounded-lg md:justify-self-end md:place-self-center shadow' src="./assets/images/imageSlider.png"/>
+                    </div>
+                    <div id='IotControl' class=" bg-medium p-4 flex flex-col md:grid md:grid-cols-2 w-full md:justify-self-center md:place-self-center md:rounded-md">
+                        <span class="w-full">
+                            <h2 class="text-xl font-semibold text-red-500">IotControl</h2>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-200 font-bold">Description</h3>
+                            <p>This android app was built to contol and monitor the interior conditions of an egg incubator.
+                                The app interacted with a nodeMCU which read instructions and fed data to the firebase RTDB. 
+                                It was built with Flutter as the frontend and Firebase as the backend.</p>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-300 font">Stack used</h3>
+                            <ul class="grid grid-cols-4 md:flex w-full md:flex-row  gap-2">
+                                Flutter, Firebase
+                            </ul>
+                            <span class="flex flex-row w-full justify-evenly md:justify-start md:gap-4 my-4">
+                                <a href='#' id='button' class="bg-red-600 shadow-light shadow py-2 font px-4 rounded">Live Demo</a>
+                                <a href='https://github.com/osmanmaltiti/iotcontrol_flutterApp.git' id='button' class="bg-black py-2 px-4 shadow-light shadow rounded">Go To Repo</a>
+                            </span>
+                        </span>
+                        <img class='md:w-1/2 rounded-lg md:justify-self-end md:place-self-center shadow' src="./assets/images/iotControl.png"/>
+                    </div>
+                    <div id='Malfolio' class=" bg-medium p-4 flex flex-col md:grid md:grid-cols-2 w-full md:justify-self-center md:place-self-center md:rounded-md">
+                        <span class="w-full">
+                            <h2 class="text-xl font-semibold text-red-500">Malfolio</h2>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-200 font-bold">Description</h3>
+                            <p>This is the first version of my portfolio app. 
+                                It was built with GastbyJS and styled with the SASS preprocessor and finally hosted on Gatsby Cloud.
+                                It is responsive and renders decently on all devices.
+                                For this current version, I decided to develop the portfolio app without any javascript libraries.</p>
+                            <h3 class="my-2 text-base text-black w-fit px-2 bg-red-300 font-bold">Stack used</h3>
+                            <ul class="grid grid-cols-4 md:flex w-full md:flex-row  gap-2">
+                                GatsbyJS, SASS
+                            </ul>
+                            <span class="flex flex-row w-full justify-evenly md:justify-start md:gap-4 my-4">
+                                <a href='https://malfolio.gatsby.io' id='button' class="bg-red-600 shadow-light shadow py-2 px-4 rounded">Live Demo</a>
+                                <a href='https://github.com/osmanmaltiti/project_portfolio.git' id='button' class="bg-black py-2 px-4 shadow-light shadow rounded">Go To Repo</a>
+                            </span>
+                        </span>
+                        <img class='md:w-1/2 rounded-lg md:justify-self-end md:place-self-center shadow' src="./assets/images/portfolio.png"/>
+                    </div>
+                </div>
             </div>
             <div id="skills" class="w-full lg:w-[85%] flex flex-col gap-4 px-2">
                 <h1 class="text-2xl lg:text-3xl font-bold">Skills & Tools</h1>
@@ -163,7 +259,7 @@
                             <p>Message</p>
                             <textarea id='message' class="resize-none px-2 h-[9rem] text-black"></textarea>
                         </label>
-                        <button id="send" class="bg-red-600 shadow-light shadow font-bold w-fit py-1 px-8 rounded">Send</button>
+                        <button id="send" class="bg-red-600 shadow-light shadow w-fit py-1 px-8 rounded">Send</button>
                     </form>
                     <img class="hidden lg:flex lg:w-[18rem] place-self-center shadow-md rounded-md" src="./assets/images/about_image.jpg"/>
                 </span>
