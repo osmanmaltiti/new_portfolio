@@ -502,10 +502,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-.static {
-  position: static;
-}
-
 .fixed {
   position: fixed;
 }
@@ -527,20 +523,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
 }
 
-.top-1 {
-  top: 0.25rem;
-}
-
-.right-1 {
-  right: 0.25rem;
-}
-
 .top-2 {
   top: 0.5rem;
 }
 
-.right-2 {
-  right: 0.5rem;
+.right-4 {
+  right: 1rem;
 }
 
 .mx-auto {
@@ -651,10 +639,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: fit-content;
 }
 
-.flex-grow {
-  flex-grow: 1;
-}
-
 .grow {
   flex-grow: 1;
 }
@@ -735,6 +719,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow-x: hidden;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -760,14 +748,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-\[\#242426\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(36 36 38 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#151515\] {
+.bg-medium {
   --tw-bg-opacity: 1;
   background-color: rgb(21 21 21 / var(--tw-bg-opacity));
+}
+
+.bg-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 36 38 / var(--tw-bg-opacity));
 }
 
 .bg-red-500 {
@@ -780,19 +768,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-light {
-  --tw-bg-opacity: 1;
-  background-color: rgb(36 36 38 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-medium {
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 21 21 / var(--tw-bg-opacity));
 }
 
 .bg-red-200 {
@@ -800,9 +778,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
-.bg-cyan-400 {
+.bg-red-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 211 238 / var(--tw-bg-opacity));
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .fill-purple-500 {
@@ -830,11 +813,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .fill-white {
-  fill: #fff;
+  fill: #FFFFFF;
 }
 
 .fill-blue-700 {
   fill: #1d4ed8;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .p-2 {
@@ -852,6 +840,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-8 {
@@ -884,9 +877,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .text-center {
@@ -901,13 +894,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: Righteous;
 }
 
-.font-ubuntu {
-  font-family: Ubuntu;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-xl {
@@ -918,11 +907,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-light {
@@ -961,8 +945,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.opacity-40 {
-  opacity: 0.4;
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .shadow-lg {
@@ -971,21 +961,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-light {
+  --tw-shadow-color: #242426;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-main::-webkit-scrollbar{
+main::-webkit-scrollbar, #cv::-webkit-scrollbar{
   width: .4rem;
 }
 
-main::-webkit-scrollbar-thumb{
+main::-webkit-scrollbar-thumb, #cv::-webkit-scrollbar-thumb{
   background-color: #7c7c7c;
 }
 
@@ -1006,20 +1007,6 @@ main::-webkit-scrollbar-thumb{
           animation: spin 1s linear infinite;
 }
 
-@media (min-width: 640px) {
-  .sm\:w-\[25rem\] {
-    width: 25rem;
-  }
-
-  .sm\:w-\[27rem\] {
-    width: 27rem;
-  }
-
-  .sm\:w-\[30rem\] {
-    width: 30rem;
-  }
-}
-
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -1029,28 +1016,12 @@ main::-webkit-scrollbar-thumb{
     display: grid;
   }
 
-  .md\:h-\[90\%\] {
-    height: 90%;
-  }
-
   .md\:w-\[60\%\] {
     width: 60%;
   }
 
   .md\:w-1\/2 {
     width: 50%;
-  }
-
-  .md\:w-\[70\%\] {
-    width: 70%;
-  }
-
-  .md\:w-\[40rem\] {
-    width: 40rem;
-  }
-
-  .md\:w-\[30rem\] {
-    width: 30rem;
   }
 
   .md\:grid-cols-2 {
@@ -1124,18 +1095,6 @@ main::-webkit-scrollbar-thumb{
     width: 18rem;
   }
 
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
-
-  .lg\:w-\[70\%\] {
-    width: 70%;
-  }
-
-  .lg\:w-\[35rem\] {
-    width: 35rem;
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1160,12 +1119,12 @@ main::-webkit-scrollbar-thumb{
     gap: 2.5rem;
   }
 
-  .lg\:gap-6 {
-    gap: 1.5rem;
-  }
-
   .lg\:gap-40 {
     gap: 10rem;
+  }
+
+  .lg\:gap-6 {
+    gap: 1.5rem;
   }
 
   .lg\:rounded-md {

@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 
-main::-webkit-scrollbar{
+main::-webkit-scrollbar, #cv::-webkit-scrollbar{
     width: .4rem;
 }
-main::-webkit-scrollbar-thumb{
+main::-webkit-scrollbar-thumb, #cv::-webkit-scrollbar-thumb{
     background-color: #7c7c7c;
 }

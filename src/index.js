@@ -26,16 +26,16 @@ const project = [
                The backend was built mainly with Express and MongoDB and Firebase for Cloud Storage and Authentication`,
         stack: ['React', 'Redux', 'SASS', 'ExpressJS', 'MongoDB', 'Firebase'],
         snapshot: './assets/images/quil.png',
-        demo: '#',
+        demo: 'https://quil-overhaul.netlify.app',
         repo: 'https://github.com/osmanmaltiti/project-one.git',
     },
     {
         name: 'ImageSlider',
         desc: `This is a mini image carousel I built with React and Tailwind. It is a responsive component that can be used in any project. HTML version of this Component is also available in my repos`,
         stack: ['ReactJS', 'Tailwind'],
-        snapshot: './assets/images/spiderman-avi.jpg',
+        snapshot: './assets/images/imageSlider.png',
         demo: '#',
-        repo: '#',
+        repo: 'https://github.com/osmanmaltiti/react-image-slider.git',
     },
     {
         name: 'IotControl',
@@ -55,10 +55,11 @@ const project = [
                For this current version, I decided to develop the portfolio app without any javascript libraries.`,
         stack: ['GatsbyJS', 'SASS'],
         snapshot: './assets/images/portfolio.png',
-        demo: '#',
+        demo: 'https://malfolio.gatsby.io',
         repo: 'https://github.com/osmanmaltiti/project_portfolio.git',
     }
 ];
+let state = false;
 const getHTML = {
     name: document.getElementById('name').addEventListener('change', (e) => data.user_name = e.target.value),
     email: document.getElementById('email').addEventListener('change', (e) => data.user_email = e.target.value),
@@ -84,28 +85,71 @@ const getHTML = {
     closeResume: document.getElementById('close').addEventListener('click', () => {
         let close = document.getElementById('resume');
         close.setAttribute('class', 'hidden')
+    }),
+    toggleTheme: document.getElementById('toggle').addEventListener('click', () => {
+        state = !state;
+        console.log(state)
+        if(state == true){
+            const elements = ['main', 'navbar', 'projects', 'contact', 'form'];
+            const buttons = ['open', 'send'];
+
+            elements.forEach(item => {
+                if(item === 'main' || item === 'form'){
+                    document.getElementById(item)
+                        .setAttribute('style', 'color: black; background-color: #d7d7d7; font-weight: bold');
+                } else {
+                    document.getElementById(item)
+                        .setAttribute('style', 'background-color: #b1b1b1');
+                }
+            });
+            project.forEach(item => {
+                document.getElementById(item.name)
+                    .setAttribute('style', 'background-color: #d7d7d7');
+            });
+            document.querySelectorAll('#button')
+                    .forEach(item => item.setAttribute('style', 'color: white; border-color: black'));
+            buttons.forEach(item => {
+                document.getElementById(item).setAttribute('style', 'color: white; border-color: black')
+            });
+            document.getElementById('logo').setAttribute('style', 'fill: black');
+                     
+        } else {
+            const elements = ['main', 'navbar', 'projects', 'contact', 'form'];
+            const buttons = ['open', 'send'];
+            elements.forEach(item => document.getElementById(item).removeAttribute('style'));
+            project.forEach(item => {
+                document.getElementById(item.name)
+                    .removeAttribute('style', 'background-color: #d7d7d7');
+            });
+            document.querySelectorAll('#button')
+                    .forEach(item => item.removeAttribute('style', 'color: white; border-color: black'));
+            buttons.forEach(item => {
+                document.getElementById(item).removeAttribute('style', 'color: white; border-color: black')
+            });
+            document.getElementById('logo').setAttribute('style', 'fill: white');
+        }
     })
 };
 
 const { projects } = getHTML;
 
 
-projects.innerHTML = project.flatMap(item => 
+projects.innerHTML = project.map(item => 
             `<div id=${item.name} class=" bg-medium p-4 flex flex-col md:grid md:grid-cols-2 w-full md:justify-self-center md:place-self-center md:rounded-md">
                 <span class="w-full">
-                    <h2 class="text-xl font-semibold text-red-400">${item.name}</h2>
+                    <h2 class="text-xl font-semibold text-red-500">${item.name}</h2>
                     <h3 class="my-2 text-base text-black w-fit px-2 bg-red-200 font-bold">Description</h3>
                     <p>${item.desc}</p>
-                    <h3 class="my-2 text-base text-black w-fit px-2 bg-red-200 font-bold">Stack used</h3>
+                    <h3 class="my-2 text-base text-black w-fit px-2 bg-red-300 font-bold">Stack used</h3>
                     <ul class="grid grid-cols-4 md:flex w-full md:flex-row  gap-2">
-                        ${ item.stack.map(item => item !== ',' ? `<li>${item}</li>`: null) }
+                        ${ item.stack.map(item => `<li>${item}</li>`).join(' ') }
                     </ul>
                     <span class="flex flex-row w-full justify-evenly md:justify-start md:gap-4 my-4">
-                        <a href=${item.demo} class="bg-red-500 py-2 font-bold px-4 rounded border-2 border-white">Live Demo</a>
-                        <a href=${item.repo} class="bg-black py-2 px-4 font-bold rounded border-2 border-white">Go To Repo</a>
+                        <a href=${item.demo} id='button' class="bg-red-600 shadow-light shadow py-2 font-bold px-4 rounded">Live Demo</a>
+                        <a href=${item.repo} id='button' class="bg-black py-2 px-4 shadow-light shadow font-bold rounded">Go To Repo</a>
                     </span>
                 </span>
-            </div>`)
+            </div>`).join(' ')
 
 project.forEach((item) => {
     let img = new Image();
@@ -114,5 +158,5 @@ project.forEach((item) => {
     
     img.onload = () => container.appendChild(img);
     img.src = url
-    img.setAttribute('class', 'md:w-1/2 rounded-lg md:justify-self-end md:place-self-center')
+    img.setAttribute('class', 'md:w-1/2 rounded-lg md:justify-self-end md:place-self-center shadow')
 });
